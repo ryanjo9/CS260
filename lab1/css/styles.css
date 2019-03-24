@@ -1,0 +1,84 @@
+/* Menu */
+.bg-dark {
+  background-color: #7DD3D8 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #333;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+nav img {
+  heigh: 50px;
+}
+
+img {
+  width: 100%;
+}
+
+/* Image Grid */
+.portfolio {
+  display: grid;
+  grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.image img {
+  width: 100%;
+}
+.container {
+  top: 20px;
+  position: relative;
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+
+.centered h1 {
+  font-size: 50px;
+  float: center;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.homePage img {
+  height:100%;
+}
+.intro {
+  float: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+.review {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	position: fixed;
+}
+footer a {
+  color: white;
+}
+body {
+  font-family: courier;
+  background-color: #dcf1f5;
+  background-image: url("https://www.transparenttextures.com/patterns/tactile-noise-light.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}

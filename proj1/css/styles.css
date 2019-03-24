@@ -1,0 +1,270 @@
+.bg-dark {
+  background-color: #bf0000 !important;
+  font-family: Lucida Typewriter;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #656664;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 2em;
+  padding-right: 0.5%;
+}
+
+/*CSS for Menu page*/
+.cell {
+  flex: 0 0 32%;
+  /* don't grow, don't shrink, width */
+  max-width: 275px;
+  max-height: auto;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  font-family: Lucida Typewriter;
+}
+.about {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  width: 90%;
+  padding-bottom: 9.3%;
+  padding-left: 5%;
+}
+/* Image Grid */
+.menu {
+  display: grid;
+  grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 80%;
+  padding-left: 5%;
+  margin: auto;
+  font-weight: 545;
+  padding-top: 5%;
+}
+
+.menuHead h1 {
+  width: 95%;
+  text-align: center;
+  font-family: Lucida Typewriter;
+}
+.about img {
+  padding: 4px;
+  max-width: 160%;
+  font-size: 80%;
+  text-align: center;
+}
+.menu img {
+  padding: 4px;
+  border: 1px solid #021a40;
+  background-color: white;
+  max-width: 275px;
+  font-size: 80%;
+  text-align: center;
+}
+
+/*end CSS for menu page*/
+
+/*img {
+  max-width: 100%;
+  image-orientation: from-image;
+}*/
+
+h1 {
+  color: black;
+  margin-top: 15px !important;
+  margin-left: 30px !important;
+  margin-right: 15px;
+}
+
+p {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: black;
+}
+
+.image img {
+  width: 100%;
+}
+
+nav img {
+  height: 10px !important;
+}
+
+/* Basic Masonry Version */
+.masonry {
+  /* Masonry container */
+  column-count: 3;
+  column-gap: 1em;
+}
+
+.item {
+  /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+/* Interactive and Responsive Version */
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Cont ainer */
+.masonry {
+  margin: 1.5em auto;
+  max-width: 98%;
+  column-gap: 1em;
+}
+
+/* The Masonry Brick */
+.item {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+#aboutPic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#intro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: auto;
+}
+
+.abt {
+  text-align: center;
+  /*font-size: 4em;*/
+  margin-left: 30px;
+  margin-right: 15px;
+  /*margin-top: 0 !important;*/
+  padding-top: 17%;
+  font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+.cell p {
+  text-align: justify;
+}
+.cell img {
+  max-width: 100%
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #8c5c38;
+  /*#8fa390;*/
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /*background-image: url(/images/minimalistBackground.jpg);*/
+  position: relative;
+  font-family: Lucida Typewriter;
+}
+
+footer img {
+  padding-left: 1%;
+}
+
+
+.footer {
+  position: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  size: 5%;
+}
+
+
+.masonry img {
+  width: 100%;
+  border-radius: 3px 3px 3px 3px;
+  padding-bottom: 5%;
+}
+
+.stars {
+  padding-left: 33%;
+  padding-top: 5%;
+  color: #dbdbdb;
+}
+
+.checked {
+  color: #FFD700;
+}
+
+.revitem {
+  display: inline-block;
+  background: #fff;
+  padding: 0.33em;
+  margin: 0 0 1.5em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  color: black;
+}
+article {
+  float: right;
+  margin: 0 1.5%;
+  width: 70%;
+}
+aside {
+  float: left;
+  margin: 0 1.5%;
+  max-width: 20%;
+}
+
+a {
+  color: yellow;
+}

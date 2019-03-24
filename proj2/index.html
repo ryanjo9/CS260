@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Stock Forecaster</a>
+  </nav>
+
+  <div class="container">
+    <form>
+      <input id="stockInput" type="text" placeholder="Enter a stock symbol"></input><br />
+      <!--Creates box to accept text-->
+      <input id="stockSubmit" type="submit" value="Submit"></input>
+      <!--button, value is test displayed on button-->
+    </form>
+  </div>
+  <hr>
+  <div class="stats">
+    <div class="container" id="explanation">
+      <p>Enter a stock symbol. On the left will appear the quote delayed by fifteen minutes. On the right a prediction of the the next trading day's values will appear.
+        This is made by performing linear regression on the daily open, close, low, and high prices for the last six months.</p>
+    </div>
+      <div class="container" id="currentQuote"></div>
+      <div class="container" id="stockResults"></div>
+  </div>
+  <hr>
+  <div class="container" id="recommendation"></div>
+  <hr>
+  <div class="graphs">
+    <div class="container" id="histGraph"></div>
+    <div class="container" id="regGraph"></div>
+  </div>
+
+  <!--  </div>-->
+
+  <footer>
+    <a href="https://github.com/ryanjo9/proj2"><img src="/images/gitHub.png"></a>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://www.lactame.com/lib/ml/3.3.0/ml.min.js"></script><!--mljs-->
+  <script text="type/javascript" src="/script.js"></script>
+
+</body>
+
+</html>
