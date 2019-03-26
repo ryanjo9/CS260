@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <title>Ideas</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Things to Do Besides Math/Programming</h1>
+    <div id="activityButtons">
+      <p>
+        <button v-on:click="chooseSports">SPORTS</button>
+        <button v-on:click="chooseHikes">HIKES</button>
+        <button v-on:click="chooseDrives">DRIVES</button>
+        <!--<button v-on:click="chooseAstronomy">ASTRONOMY</button>
+        <button v-on:click="chooseMusic">MUSIC</button>-->
+        <button v-on:click="chooseWut">WUT</button>
+        <button v-on:click="chooseRandom">RANDOM</button>
+      </p>
+    </div>
+    <h2>{{ categoryName }}:</h2>
+    <ul>
+      <li v-for="item in selectedActivity">
+        <label><h2>{{ item.name }}</h2>
+          <p v-if='item.price'><i>{{ item.price }}</i></p>
+          <p v-if='item.description'>{{ item.description }}</p>
+          <p v-if='item.when'>When: {{ item.when }}
+          <p v-if='item.directions'><a v-bind:href="item.directions" onClick="item.count += 1">Directions</a>
+          <br><a v-bind:href="item.googleDetails">Reviews</a></p>
+        </label>
+      </li>
+      <form v-on:submit.prevent="addItem">
+        <input type="text" placeholder="Activity Name" v-model="newName">
+        <input type="text" placeholder="Description" v-model="newDescription"><br>
+        <input type="text" placeholder="Price" v-model="newPrice">
+        <button type="submit">Add</button>
+      </form>
+      <div id="intro">
+        <p>Things to do for the engineers, developers, other math people that want to do something other than stare at a screen all day. Take an idea, leave an idea.</p>
+        <p>Note that the backend for this website has not been developed yet. It is coming. Therefore any ideas you add will only live on your computer as long as you keep the tab open.</p>
+      </div>
+    </ul>
+  </div>
+
+    <hr>
+    <a href="https://github.com/ryanjo9/proj3">Github Link</a>
+  </div>
+  <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
