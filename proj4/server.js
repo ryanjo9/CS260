@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/ideas', {
   useNewUrlParser: true
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(3001, () => console.log('Server listening on port 3000!'));
 
 const multer = require('multer')
 

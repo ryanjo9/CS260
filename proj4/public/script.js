@@ -32,35 +32,17 @@ let app = new Vue({
       if (this.categoryName === "RANDOM") {
         let randomItems = new Array;
         //Gets random number for category and item in category
-
         let keys = Object.keys(activity)
         let first = activity[keys[keys.length * Math.random() << 0]];
         let second = activity[keys[keys.length * Math.random() << 0]];
         while (second === first) {
           second = activity[keys[keys.length * Math.random() << 0]];
         }
-
         let firstActivities = this.activities[first];
         let secondActivities = this.activities[second];
         randomItems.push(firstActivities[firstActivities.length * Math.random() << 0])
         randomItems.push(secondActivities[secondActivities.length * Math.random() << 0])
 
-
-
-
-
-        // let firstCategoryIndex = Math.floor(Math.random() * (Object.keys(activity).length - 0));
-        // let firstItemIndex = Math.floor(Math.random() * (this.activities[firstCategoryIndex].length - 0));
-        // randomItems.push(this.activities[firstCategoryIndex][firstItemIndex]);
-        //
-        // let secondCategoryIndex = Math.floor(Math.random() * (Object.keys(activity).length - 0));
-        // let secondItemIndex = firstItemIndex;
-        // while (firstCategoryIndex === secondCategoryIndex) {
-        //   secondCategoryIndex = Math.floor(Math.random() * (Object.keys(activity).length - 0));
-        // }
-        // secondItemIndex = Math.floor(Math.random() * (this.activities[secondCategoryIndex].length - 0))
-        // randomItems.push(this.activities[secondCategoryIndex][secondItemIndex]);
-        //this.selection = activity.hikes;
         return randomItems;
       }
       return this.activities[this.selection];
@@ -112,8 +94,6 @@ let app = new Vue({
       }
     },
     reviewsLink(name) {
-      console.log(this.selection);
-      console.log(activity.wut);
       if (this.selection !== activity.wut) {
         return 'https://www.google.com/maps/search/?api=1&query=' + this.replaceSpaces(name);
       } else {
@@ -147,10 +127,5 @@ let app = new Vue({
       this.categoryName = 'SPORTS';
       this.categoryName = 'RANDOM';
     }
-
-
   }
-
-
-
 });
