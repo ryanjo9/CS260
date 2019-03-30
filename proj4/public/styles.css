@@ -12,6 +12,24 @@ body {
 #intro p {
   max-width: 400px;
 }
+#admin h1 {
+  padding-left: 5%;
+}
+
+#admin p {
+  padding-left: 5%;
+}
+
+#edit {
+  background: #fff;
+  max-width: 400px;
+  min-height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  display: flex;/
+  align-items: center;
+}
 ul {
     list-style: none;
 }
@@ -26,6 +44,9 @@ li {
     align-items: center;
 }
 #app {
+  padding-left: 25%;
+}
+#admin {
   padding-left: 25%;
 }
 

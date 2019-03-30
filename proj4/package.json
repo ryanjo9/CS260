@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanjo9/lab-4-ryanjo9.git"
+    "url": "git+https://github.com/ryanjo9/CS260/tree/master/proj4"
   },
-  "author": "",
+  "author": "Ryan O'Laughlin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BYU-CS-260-Winter-2019/lab-4-ryanjo9/issues"
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/BYU-CS-260-Winter-2019/lab-4-ryanjo9#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.4.19",
+    "mongoose": "^5.4.20",
     "multer": "^1.4.1"
   }
 }

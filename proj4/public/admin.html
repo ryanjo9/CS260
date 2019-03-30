@@ -8,8 +8,9 @@
 </head>
 
 <body>
-  <div id="app">
-    <h1>Things to Do Besides Math/Programming</h1>
+  <div id="admin">
+    <h1>EDIT/DELETE IDEAS</h1>
+    <p>Click on an idea to edit/delete it</p>
     <div id="activityButtons">
       <p>
         <button v-on:click="chooseSports">SPORTS</button>
@@ -18,43 +19,50 @@
         <!--<button v-on:click="chooseAstronomy">ASTRONOMY</button>
         <button v-on:click="chooseMusic">MUSIC</button>-->
         <button v-on:click="chooseWut">WUT</button>
-        <button v-on:click="chooseRandom">RANDOM</button>
       </p>
     </div>
-    <h2>{{ categoryName }}:</h2>
-    <ul>
-      <li v-for="item in selectedActivity">
+   <ul>
+      <div class="edit" v-if="editingItem != ''">
+        <label><h2>{{ editingItem.name }}</h2>
+          <p v-if='editingItem.price'><i>{{ editingItem.price }}</i></p>
+          <p v-if='editingItem.description'>{{ editingItem.description }}</p>
+          <p v-if='editingItem.when'>When: {{ editingItem.when }}
+          <p v-if='editingItem.directions'><a v-bind:href="editingItem.directions" onClick="editingItem.count += 1">Directions</a>
+          <br><a v-bind:href="editingItem.googleDetails">Reviews</a></p>
+        </label>
+        <form v-on:submit.prevent="editItem">
+          <input type="text" placeholder="Activity Name" v-model="newName">
+          <input type="text" placeholder="Description" v-model="newDescription"><br>
+          <input type="text" placeholder="When" v-model="newTime">
+          <input type="text" placeholder="Price" v-model="newPrice">
+          <br>
+          <button type="submit">Edit</button>
+        </form>
+        <button v-on:click="deleteItem" type="submit">Delete</button>
+        <button v-on:click="clearEntries" type="submit">Cancel</button>
+      </div>
+      <li v-if="editingItem == ''" v-for="item in selectedActivity">
         <label><h2>{{ item.name }}</h2>
           <p v-if='item.price'><i>{{ item.price }}</i></p>
           <p v-if='item.description'>{{ item.description }}</p>
           <p v-if='item.when'>When: {{ item.when }}
           <p v-if='item.directions'><a v-bind:href="item.directions" onClick="item.count += 1">Directions</a>
           <br><a v-bind:href="item.googleDetails">Reviews</a></p>
+          <button v-on:click="selectItem(item)" class="select" style="display: none;"></button>
         </label>
       </li>
-      <form v-if="categoryName != 'RANDOM'" v-on:submit.prevent="addItem">
-        <input type="text" placeholder="Activity Name" v-model="newName">
-        <input type="text" placeholder="Description" v-model="newDescription"><br>
-        <input type="text" placeholder="When" v-model="newTime">
-        <input type="text" placeholder="Price" v-model="newPrice">
-        <button type="submit">Add</button>
-      </form>
-      <div id="intro">
-        <p>Things to do for the engineers, developers, other math people that want to do something other than stare at a screen all day. Take an idea, leave an idea.</p>
-        <p>Note that the backend for this website has not been developed yet. It is coming. Therefore any ideas you add will only live on your computer as long as you keep the tab open.</p>
-      </div>
     </ul>
   </div>
-  <div id="footer">
+  <div id='footer'>
     <hr>
-    <a href="/admin.html">Admin Page</a>
+    <a href="/">Home</a>
     <a href="https://github.com/ryanjo9/CS260/tree/master/proj4">Github Link</a>
-</div>
+  </div>
   <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
-  <script src="/script.js"></script>
+  <script src="/admin.js"></script>
 </body>
 
 </html>

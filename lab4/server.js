@@ -68,12 +68,9 @@ app.post('/api/items', async (req, res) => {
 
 app.put('/api/items/:id', async (req, res) => {
   try {
-    console.log(req.params.id);
     let item = await Item.findOne({
       _id: req.params.id
     });
-    console.log("req.body", req.body);
-    console.log("req.id:", req.params.id);
     item.title = req.body.title;
     item.description = req.body.description;
     await item.save();
@@ -96,7 +93,6 @@ app.get('/api/items', async (req, res) => {
 });
 
 app.delete('/api/items/:id', async (req, res) => {
-  console.log("hello");
   try {
     await Item.deleteOne({
       _id: req.params.id

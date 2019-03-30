@@ -6,6 +6,12 @@ body {
   margin: 0px;
 }
 
+.select {
+    display: none!;
+    margin-left: auto;
+}
+
+
 /* Header */
 .header {
   display: flex;
