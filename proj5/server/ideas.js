@@ -141,7 +141,7 @@ router.get("/suggestions", auth.verifyToken, User.verify, async (req, res) => {
       let age = user.age ? user.age : item.commonAge;
       let rs = user.relationshipStatus ? user.relationshipStatus : item.commonRelationship;
       let budget = user.budget ? user.budget : item.commonBudget;
-      if (Math.abs(item.commonAge - age) < 3 && item.commonRelationship === rs && Math.abs(item.commonBudget - budget) < 10) {
+      if (Math.abs(item.commonAge - age) < 5 && item.commonRelationship === rs && Math.abs(item.commonBudget - budget) < 15) {
         return item
       }
     })

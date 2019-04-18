@@ -80,10 +80,12 @@ export default {
           title: this.title,
           price: this.price,
           category: this.category,
-          directionsLink: this.directionsLink(this.title),
-          reviewsLink: this.reviewsLink(this.title),
           description: this.description,
           time: this.time,
+        }
+        if (this.category !== 'wut') {
+          idea.directionsLink =  this.directionsLink(this.title),
+          idea.reviewsLink =  this.reviewsLink(this.title),
         }
         this.error = await this.$store.dispatch("addIdea", idea);
         if (!this.error) {
