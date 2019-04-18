@@ -5,6 +5,8 @@
     <p>For all the engineers, programmers, and other STEM people who like to do things that don't involve staring at a screen.</p>
     <p>Anyone can browse through the list. If you want to "like" an idea, contribute your own, or see suggestions based on what we think you'll like, click on the MyPage link on the side to register for an account</p>
     <idea-list :ideas="ideas" />
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <a href="https://github.com/ryanjo9/CS260/tree/master/proj5">Github</a>
   </div>
 </template>
 
