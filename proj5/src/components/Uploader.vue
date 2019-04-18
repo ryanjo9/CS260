@@ -84,8 +84,8 @@ export default {
           time: this.time,
         }
         if (this.category !== 'wut') {
-          idea.directionsLink =  this.directionsLink(this.title),
-          idea.reviewsLink =  this.reviewsLink(this.title),
+          idea.directionsLink =  this.directionsLink(this.title);
+          idea.reviewsLink =  this.reviewsLink(this.title);
         }
         this.error = await this.$store.dispatch("addIdea", idea);
         if (!this.error) {
